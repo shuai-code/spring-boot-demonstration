@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class MyApplicationRunner implements ApplicationRunner {
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         log.info("SpringBoot启动完成, 参数: {}, 执行一些业务初始化操作~~", JSONObject.toJSONString(args));
     }
 }
