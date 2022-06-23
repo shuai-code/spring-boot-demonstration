@@ -18,6 +18,9 @@ public class MyApplicationRunListener implements SpringApplicationRunListener {
 
     private final String[] args;
 
+    /**
+     * 自定义的启动监听器必须有这个构造器才能生效
+     * */
     public MyApplicationRunListener(SpringApplication application, String[] args) {
         this.application = application;
         this.args = args;
@@ -31,6 +34,7 @@ public class MyApplicationRunListener implements SpringApplicationRunListener {
     @Override
     public void environmentPrepared(ConfigurableBootstrapContext bootstrapContext, ConfigurableEnvironment environment) {
         System.out.println("SpringBoot服务初始化配置完成");
+        System.out.println(environment.getProperty("server.port"));
     }
 
     @Override
