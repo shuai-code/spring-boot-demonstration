@@ -25,36 +25,36 @@ public class MyApplicationRunListener implements SpringApplicationRunListener {
 
     @Override
     public void starting(ConfigurableBootstrapContext bootstrapContext) {
-
+        System.out.println("SpringBoot服务开始启动");
     }
 
     @Override
     public void environmentPrepared(ConfigurableBootstrapContext bootstrapContext, ConfigurableEnvironment environment) {
-
+        System.out.println("SpringBoot服务初始化配置完成");
     }
 
     @Override
     public void contextPrepared(ConfigurableApplicationContext context) {
-
+        System.out.println("SpringBoot服务容器准备完成");
     }
 
     @Override
     public void contextLoaded(ConfigurableApplicationContext context) {
-
+        System.out.println("SpringBoot服务容器载入完成");
     }
 
     @Override
     public void started(ConfigurableApplicationContext context, Duration timeTaken) {
-
+        System.out.println("SpringBoot服务启动完成");
     }
 
     @Override
     public void ready(ConfigurableApplicationContext context, Duration timeTaken) {
-
+        System.out.println("SpringBoot服务准备就绪");
     }
 
     @Override
     public void failed(ConfigurableApplicationContext context, Throwable exception) {
-
+        System.out.println("SpringBoot服务启动异常");
     }
 }
