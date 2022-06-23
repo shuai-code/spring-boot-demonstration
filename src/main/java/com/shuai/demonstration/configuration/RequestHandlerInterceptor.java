@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 public class RequestHandlerInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-        log.info("1收到接口请求URI: {}, 请求参数: {}", request.getRequestURI(), JSONObject.toJSONString(request.getParameterMap()));
+        log.info("收到接口请求URI: {}, 请求参数: {}", request.getRequestURI(), JSONObject.toJSONString(request.getParameterMap()));
         return true;
     }
 

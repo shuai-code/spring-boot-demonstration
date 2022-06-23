@@ -23,10 +23,9 @@ public class MyApplicationRunListener implements SpringApplicationRunListener {
         this.args = args;
     }
 
-
     @Override
     public void starting(ConfigurableBootstrapContext bootstrapContext) {
-        System.out.println("1");
+
     }
 
     @Override
