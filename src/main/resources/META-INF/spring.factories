@@ -1,2 +1,2 @@
 org.springframework.boot.SpringApplicationRunListener=\
-com.shuai.demonstration.configuration.MyApplicationRunListener
+com.shuai.demonstration.configuration.SimpleApplicationRunListener

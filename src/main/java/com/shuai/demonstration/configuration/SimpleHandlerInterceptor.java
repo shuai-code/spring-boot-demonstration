@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @Slf4j
 @Component
-public class RequestHandlerInterceptor implements HandlerInterceptor {
+public class SimpleHandlerInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         log.info("收到接口请求URI: {}, 请求参数: {}", request.getRequestURI(), JSONObject.toJSONString(request.getParameterMap()));

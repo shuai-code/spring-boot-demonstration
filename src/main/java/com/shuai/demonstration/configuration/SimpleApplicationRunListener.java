@@ -12,7 +12,7 @@ import java.time.Duration;
  * SpringBoot服务启动过程监听器, 监听启动过程的各个节点
  * @author Yangs
  */
-public class MyApplicationRunListener implements SpringApplicationRunListener {
+public class SimpleApplicationRunListener implements SpringApplicationRunListener {
 
     private final SpringApplication application;
 
@@ -21,7 +21,7 @@ public class MyApplicationRunListener implements SpringApplicationRunListener {
     /**
      * 自定义的启动监听器必须有这个构造器才能生效
      * */
-    public MyApplicationRunListener(SpringApplication application, String[] args) {
+    public SimpleApplicationRunListener(SpringApplication application, String[] args) {
         this.application = application;
         this.args = args;
     }

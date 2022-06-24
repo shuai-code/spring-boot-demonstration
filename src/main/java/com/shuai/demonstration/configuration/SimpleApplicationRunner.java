@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Slf4j
 @Configuration
-public class MyApplicationRunner implements ApplicationRunner {
+public class SimpleApplicationRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) {

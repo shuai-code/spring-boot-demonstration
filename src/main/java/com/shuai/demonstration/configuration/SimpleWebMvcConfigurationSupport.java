@@ -8,10 +8,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
  * @author Yangs
  */
 @Configuration
-public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
+public class SimpleWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
 
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new RequestHandlerInterceptor());
+        registry.addInterceptor(new SimpleHandlerInterceptor());
     }
 }
