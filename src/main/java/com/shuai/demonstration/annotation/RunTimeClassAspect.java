@@ -13,21 +13,13 @@ import org.springframework.util.StopWatch;
 @Slf4j
 @Aspect
 @Component
-public class RunTimeAspect {
-
-    /**
-     * * @annotation 用于方法上, 对当前方法生效
-     * */
-    @Pointcut("@annotation(RunTime)")
-    public void doCut() {
-
-    }
+public class RunTimeClassAspect {
 
     /**
      * * @within 用于类上, 会对类下的所有方法生效
      * */
-    @Pointcut("@within(RunTime)")
-    public void doClassCut() {
+    @Pointcut("@within(RunTimeClass)")
+    public void doCut() {
 
     }
 

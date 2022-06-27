@@ -9,9 +9,9 @@ import java.lang.annotation.Target;
  * 一个记录方法执行时间的注解
  * @author Yangs
  */
-@Target({ElementType.METHOD})
+@Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface RunTime {
+public @interface RunTimeClass {
 
     /**
      * 时间阈值, 超出后打印异常日志
