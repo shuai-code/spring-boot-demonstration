@@ -2,7 +2,6 @@ package com.shuai.demonstration.controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -37,26 +36,10 @@ public class SimplePostController {
     }
 
     /**
-     * 指定接口的名称
+     * * @RequestBody
      * */
     @PostMapping(value = "/add/user", name = "添加用户")
     public String add4(@RequestBody String name) {
         return name;
     }
-
-//    /**
-//     * 指定接口的名称
-//     * */
-//    @PostMapping(value = "/add/user", name = "添加用户")
-//    public String add4(@RequestBody String name) {
-//        return name;
-//    }
-//
-//    /**
-//     * 指定接口的名称
-//     * */
-//    @PostMapping(value = "/add/user", name = "添加用户")
-//    public String add6(@RequestParam String name) {
-//        return name;
-//    }
 }
