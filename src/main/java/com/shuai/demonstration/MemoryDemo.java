@@ -36,6 +36,13 @@ public class MemoryDemo {
         System.out.println("空列表类型, 占用内存:" + ObjectSizeCalculator.getObjectSize(x) + "字节");
         x.add("aaa");
         System.out.println("列表类型, 添加1个元素, 因为扩容预分配空间的原因, 占用内存:" + ObjectSizeCalculator.getObjectSize(x) + "字节");
+
+
+        System.out.println(ObjectSizeCalculator.getEffectiveMemoryLayoutSpecification().getObjectHeaderSize());
+        System.out.println(ObjectSizeCalculator.getEffectiveMemoryLayoutSpecification().getObjectPadding());
+        System.out.println(ObjectSizeCalculator.getEffectiveMemoryLayoutSpecification().getReferenceSize());
+        System.out.println(ObjectSizeCalculator.getEffectiveMemoryLayoutSpecification().getArrayHeaderSize());
+        System.out.println(ObjectSizeCalculator.getEffectiveMemoryLayoutSpecification().getSuperclassFieldPadding());
     }
 
     public static class U {
