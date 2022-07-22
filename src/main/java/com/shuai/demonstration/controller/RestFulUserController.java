@@ -1,6 +1,5 @@
 package com.shuai.demonstration.controller;
 
-import com.shuai.demonstration.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,29 +32,6 @@ public class RestFulUserController {
      */
     @DeleteMapping("/remove/user")
     public String removeUser(Integer id) {
-        return "";
-    }
-
-    /**
-     * PUT 用于更新资源, 保证幂等性, 基于ID进行更新. 并且会全量更新字段, 未传字段置为默认值
-     */
-    @PutMapping("/put/user")
-    public String putUser(Integer id, String name) {
-        User user = new User();
-        user.setId(id);
-        user.setName(name);
-        user.setAge(0);
-        return "";
-    }
-
-    /**
-     * PUT 用于更新资源, 保证幂等性, 基于ID进行更新. 进行局部更新, 只会对已传的字段更新, 其他字段不变
-     */
-    @PatchMapping("/patch/user")
-    public String patchUser(Integer id, String name) {
-        User user = new User();
-        user.setId(id);
-        user.setName(name);
         return "";
     }
 }
