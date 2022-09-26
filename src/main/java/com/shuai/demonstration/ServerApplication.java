@@ -8,9 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Yangs
  */
 @SpringBootApplication
-public class DemonstrationApplication {
+public class ServerApplication {
     public static void main(String[] args) {
-        SpringApplication application = new SpringApplication(DemonstrationApplication.class);
+        SpringApplication application = new SpringApplication(ServerApplication.class);
         application.addListeners(new SimpleListener());
         application.run(args);
     }
