@@ -17,7 +17,7 @@ public class FactoryController {
     @Autowired
     VendorFactory<Object> vendorFactory;
 
-    @RequestMapping("/add/log")
+    @RequestMapping("/add/message")
     public String doPush(String message) {
         vendorFactory.getVendor(1).doPush();
         return "success";

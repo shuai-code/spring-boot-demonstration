@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
+
 /**
  * @author Yangs
  */
@@ -14,8 +16,8 @@ public class LogController {
     LogService logService;
 
     @RequestMapping("/add/log")
-    public String addLog(String message) {
-        logService.addLog(message);
+    public String addLog() throws IOException {
+        logService.createIndex();
         return "success";
     }
 }
