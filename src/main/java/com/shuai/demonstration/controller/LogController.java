@@ -17,7 +17,7 @@ public class LogController {
 
     @RequestMapping("/add/log")
     public String addLog() throws IOException {
-        logService.createIndex();
+        logService.selectOrder();
         return "success";
     }
 }
